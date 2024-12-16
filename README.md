@@ -20,3 +20,26 @@ C++ Moderno Implementa un programa que utilice expresiones lambda para definir u
 ### Ejercicio 6: 
 Introducción a Boost Instala la biblioteca Boost en tu entorno de desarrollo CLion. Luego, crea un programa que utilice la función boost::lexical_cast para convertir una cadena de caracteres en un número entero. Asegúrate de manejar cualquier posible excepción que pueda lanzar boost::lexical_cast.
 
+## Para instalar Boost:
+
+Ve al sitio oficial de Boost y descarga la versión más reciente en formato .zip o .7z.
+Extrae Boost:
+
+Extrae el contenido del archivo descargado en una carpeta de tu elección, por ejemplo: C:\Boost.
+
+``
+find_package(Boost REQUIRED):
+``
+Esto busca Boost en tu sistema.
+Si estás en Windows y Boost no está en una ruta estándar, puedes especificar su ubicación con:
+cmake
+Copiar código
+`` set(Boost_INCLUDE_DIR "C:/Boost")
+find_package(Boost REQUIRED)
+include_directories(${Boost_INCLUDE_DIRS}):
+``
+Agrega el directorio de cabeceras de Boost al proyecto.
+``
+add_executable(Ejercicio6 main.cpp):
+``
+Especifica el archivo fuente de tu proyecto (en este caso, main.cpp).
